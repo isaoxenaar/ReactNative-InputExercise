@@ -26,7 +26,9 @@ export default function App() {
       </View>
       <View>
         {courseGoals.map((goal) => (
-          <Text>{goal}</Text>
+          <View style={styles.listItem}>
+            <Text key={goal}>{goal}</Text>
+          </View>
         ))}
       </View>
       <Text>{outputText}</Text>
@@ -46,5 +48,18 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+  },
+  input: {
+    width: "80%",
+    borderColor: "black",
+    borderWidth: 1,
+    padding: 10,
+  },
+  listItem: {
+    padding: 10,
+    marginVertical: 10,
+    backgroundColor: "#ccc",
+    borderColor: "black",
+    borderWidth: 1,
   },
 });
