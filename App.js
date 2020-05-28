@@ -1,10 +1,24 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View, Button } from "react-native";
+import { StyleSheet, Text, TextInput, View, Button } from "react-native";
 
 export default function App() {
   const [outputText, setOutputText] = useState("BOTTENPOP");
   return (
-    <View style={styles.container}>
+    <View style={styles}>
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <TextInput
+          placeholder="course goal"
+          style={{ borderBottomColor: "black", borderBottomWidth: 1 }}
+        />
+        <Button title="ADD" />
+      </View>
+      <View></View>
       <Text>{outputText}</Text>
       <Button
         title="change text"
@@ -15,10 +29,7 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+  screen: {
+    padding: 50,
   },
 });
